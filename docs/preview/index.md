@@ -16,13 +16,13 @@ The CLI will require the following data:
 - **Project short name**: Hyphenated and lowercased title (project name for machines)
 - **Project website**: URL where the project will be deployed
 - **Github repository**: Repository in format `<owner>/<code repository>`
-- **Description**: Short description of project
+- **Description**: Short description of the project
 - **Author name**: Your name or that of your organization
 - **Author email**: Email for communication
 - **Year**: The current year
-- **One of the three available storage systems**: postgresql (default), mysql or sqlite
+- **One of the three available storage systems**: postgresql (default), mysql, or sqlite
 - **The version of Elasticsearch**: 7 (default) or 6
-- **Storage backend**: Local file system or in a S3-like backend. If S3 is chosen a MinIO container is provided, however, you can set it up to use your own. See more in [S3 extension](../extensions/s3.md)
+- **Storage backend**: Your local file system or a S3-like backend. If S3 is chosen, a MinIO container is provided. However, you can set it up to be used without this container. Read more in [S3 extension](../extensions/s3.md).
 
 It will also generate a test private key.
 
@@ -68,7 +68,7 @@ writing new private key to 'docker/nginx/test.key'
 Creating logs directory...
 ```
 
-Observe the generated files. A full description of each of them can be found in the [invenio-cli RFC](https://github.com/inveniosoftware/rfcs/pull/4)
+Observe the generated files. A full description of each of them can be found in the [invenio-cli RFC](https://github.com/inveniosoftware/rfcs/pull/4).
 
 ``` bash
 ls -la february-release
@@ -95,17 +95,17 @@ drwxr-xr-x 2 youruser youruser 4096 Feb 19 13:45 templates/
 
 **Notes and Known Issues**
 
-- For now, the only available flavour is RDM (Research Data Management). In the future, there will be others, for example ILS (Integrated Library System).
+- For now, the only available flavour is RDM (Research Data Management). In the future, there will be others such as ILS (Integrated Library System).
 
 - You may be prompted with `You've downloaded /home/<username>/.cookiecutters/cookiecutter-invenio-rdm before. Is it okay to delete and re-download it? [yes]:`. Press `[Enter]` in that case. This will download the latest cookiecutter template.
 
-- Some OpenSSL versions display an error message when obtaining random numbers, but this has no incidence (as far as we can tell) on functionality. We are investigating a possible solution to raise less eyebrows for appearance sake.
+- Some OpenSSL versions display an error message when obtaining random numbers, but this has no effect (as far as we can tell) on functionality. We are investigating possible solutions for the sake of appearance that raise less eyebrows.
 
 
 ## Containerize and run your instance
 
-The project is initialized, we just need to run it. Switch to the project
-directory and do so:
+At this point, the project is initialized; we just need to run it. Switch to the project
+directory and get it started:
 
 ``` bash
 cd february-release
@@ -136,7 +136,7 @@ You can now get a full sense for what InvenioRDM offers and explore.
 If you are already familiar with Invenio and the many commands its CLI (`invenio`)
 provides, you might be wondering how to execute those. Because the entire application
 is containerized, you need to connect to the web-api or web-ui container in order
-to use one of those commands. In fact, this is what `invenio-cli` does behind the scene!
+to use one of those commands. In fact, this is what `invenio-cli` does behind the scenes!
 
 ``` bash
 docker exec -it <container name or id> /bin/bash
@@ -156,7 +156,7 @@ cd <project name>
 invenio-cli containerize
 ```
 
-These instructions don't provide you with a nice development experience though.
-You need to run `invenio-cli containerize` for every change you make in your
+These instructions don't provide you with a nice working environment.
+To improve your development experience, you need to run `invenio-cli containerize` for every change you make in your
 project. That's slow and cumbersome. Up next, we show how to [develop your
 local instance](../develop/index.md) and set yourself up to be productive!
