@@ -57,8 +57,8 @@ Creating logs directory...
 
 **Notes and Known Issues**
 
-- For now, the only available flavour is RDM (Research Data Management). In the future, there will be others, for example ILS (Integrated Library System).
+- For now, the only available flavour is RDM (Research Data Management). There will be others in the future, such as ILS (Integrated Library System).
 
 - You may be prompted with `You've downloaded /home/<username>/.cookiecutters/cookiecutter-invenio-rdm before. Is it okay to delete and re-download it? [yes]:`. Press `[Enter]` in that case. This will download the latest cookiecutter template.
 
-- Some OpenSSL versions display an error message when obtaining random numbers, but this has no incidence (as far as we can tell) on functionality. We are investigating a possible solution to raise less eyebrows for appearance sake.
+- Some OpenSSL versions display an error message when obtaining random numbers, but this has no effect (as far as we can tell) on functionality. For the sake of appearance, we are investigating a possible solution that will raise less eyebrows.
