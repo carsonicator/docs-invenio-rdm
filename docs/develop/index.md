@@ -1,8 +1,8 @@
 # Getting Started
 
-You are now ready to learn how to create, customize and iterate on your own
+You are now ready to learn how to create, customize, and iterate on your own
 InvenioRDM instance. In fact, the previous section showed you the last step before
-deploying. You wouldn't want to fully containerize your application in the day
+deploying. You wouldn't want to fully containerize your application during the day
 to day of developing your instance.
 
 When working on your InvenioRDM application, you will want to use the commands
